@@ -1,103 +1,152 @@
-<!DOCTYPE html>
-<html lang="en-US">
+!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>jQuery Tabs Demo</title>
+		<style>
+			* {padding:0; margin:0;}
 
-<head>
-<title>bgpricing</title>
-<link rel="stylesheet" type="text/css"href="style.css" media="all">
-<link rel="shortcut icon" type="image/x-icon" href="images/icon.png">
+			html {
+				background:url("Images/p1.jpg") 0 0 no-repeat;
+				padding:15px 15px 0;
+				font-family:sans-serif;
+				font-size:14px;
+			}
 
+			p, h3 { 
+				margin-bottom:15px;
+			}
 
-<style>
+			div {
+				padding:10px;
+				width:90%;
+				background:#fff;
+			}
 
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
+			.tabs li {
+				list-style:none;
+				display:inline;
+			}
 
-/* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-}
+			.tabs a {
+				padding:5px 10px;
+				display:inline-block;
+				background:#666;
+				color:#fff;
+				text-decoration:none;
+			}
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
+			.tabs a.active {
+				background:#fff;
+				color:#000;
+			}
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
+		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		
+	</head>
+	<body>
+		<ul class='tabs'>
+			<li><a href='#tab1'>Fare Application</a></li>
+			<li><a href='#tab2'>Ticket</a></li>
+			<li><a href='#tab3'>Validity</a></li>
+			<li><a href='#tab4'>Voluntary Change</a></li>
+			<li><a href='#tab5'>Baggage</a></li>
+			<li><a href='#tab6'>Special Services</a></li>
+			<li><a href='#tab7'>Refund</a></li>
+			<li><a href='#tab8'>Child and Inafnt</a></li>
+			<li><a href='#tab9'>UM</a></li>
+			<li><a href='#tab10'>Glosarry</a></li>
+			<li><a href='#tab11'>Contact</a></li>
+			<li><a href='#tab12'>Suggestion</a></li>
+		</ul>
+		<div id='tab1'>
+			<h3>Fare application</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis placerat dolor id aliquet. Sed a orci in justo blandit commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+		</div>
+		<div id='tab2'>
+			<h3>Ticket</h3>
+			<p>Aenean et est tortor. In pharetra pretium convallis. Mauris sollicitudin ligula non mi hendrerit varius. Fusce convallis hendrerit mauris, eu accumsan nisl aliquam eu.</p>
+		</div>
+		<div id='tab3'>
+			<h3>Section 3</h3>
+			<p>Suspendisse potenti. Morbi laoreet magna vitae est mollis ultricies. Mauris eget enim ac justo eleifend malesuada. Proin non consectetur est. Integer semper laoreet porta. Praesent facilisis leo nec libero tincidunt blandit.</p>
+		</div>
+		<div id='tab4'>
+			<h3>Section 1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis placerat dolor id aliquet. Sed a orci in justo blandit commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+		</div>
+		<div id='tab5'>
+			<h3>Section 2</h3>
+			<p>Aenean et est tortor. In pharetra pretium convallis. Mauris sollicitudin ligula non mi hendrerit varius. Fusce convallis hendrerit mauris, eu accumsan nisl aliquam eu.</p>
+		</div>
+		<div id='tab6'>
+			<h3>Section 3</h3>
+			<p>Suspendisse potenti. Morbi laoreet magna vitae est mollis ultricies. Mauris eget enim ac justo eleifend malesuada. Proin non consectetur est. Integer semper laoreet porta. Praesent facilisis leo nec libero tincidunt blandit.</p>
+		</div>
+		<div id='tab7'>
+			<h3>Section 1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis placerat dolor id aliquet. Sed a orci in justo blandit commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+		</div>
+		<div id='tab8'>
+			<h3>Section 2</h3>
+			<p>Aenean et est tortor. In pharetra pretium convallis. Mauris sollicitudin ligula non mi hendrerit varius. Fusce convallis hendrerit mauris, eu accumsan nisl aliquam eu.</p>
+		</div>
+		<div id='tab9'>
+			<h3>Section 3</h3>
+			<p>Suspendisse potenti. Morbi laoreet magna vitae est mollis ultricies. Mauris eget enim ac justo eleifend malesuada. Proin non consectetur est. Integer semper laoreet porta. Praesent facilisis leo nec libero tincidunt blandit.</p>
+		</div>
+		<div id='tab10'>
+			<h3>Section 1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis placerat dolor id aliquet. Sed a orci in justo blandit commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+		</div>
+		<div id='tab11'>
+			<h3>Section 2</h3>
+			<p>Aenean et est tortor. In pharetra pretium convallis. Mauris sollicitudin ligula non mi hendrerit varius. Fusce convallis hendrerit mauris, eu accumsan nisl aliquam eu.</p>
+		</div>
+		<div id='tab12'>
+			<h3>Sugesstion</h3>
+			<p>Suspendisse potenti. Morbi laoreet magna vitae est mollis ultricies. Mauris eget enim ac justo eleifend malesuada. Proin non consectetur est. Integer semper laoreet porta. Praesent facilisis leo nec libero tincidunt blandit.</p>
+		</div>
+	</body>
+	<script>
+			// Wait until the DOM has loaded before querying the document
+			$(document).ready(function(){
+				$('ul.tabs').each(function(){
+					// For each set of tabs, we want to keep track of
+					// which tab is active and its associated content
+					var $active, $content, $links = $(this).find('a');
 
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
+					// If the location.hash matches one of the links, use that as the active tab.
+					// If no match is found, use the first link as the initial active tab.
+					$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+					$active.addClass('active');
 
-</style>
-</head>
+					$content = $($active[0].hash);
 
-<body>
+					// Hide the remaining content
+					$links.not($active).each(function () {
+						$(this.hash).hide();
+					});
 
+					// Bind the click event handler
+					$(this).on('click', 'a', function(e){
+						// Make the old tab inactive.
+						$active.removeClass('active');
+						$content.hide();
 
+						// Update the variables with the new link and content
+						$active = $(this);
+						$content = $(this.hash);
 
+						// Make the tab active.
+						$active.addClass('active');
+						$content.show();
 
-
-
-<!-- Tab links -->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-</div>
-
-<!-- Tab content -->
-<div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
-</div>
-
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-<script>
-function openCity(evt, cityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-</script>
-</body>
+						// Prevent the anchor's default click action
+						e.preventDefault();
+					});
+				});
+			});
+		</script>
+</html>
